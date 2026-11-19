@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Álbum XV Studio</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <h2>♛ Álbum XV Studio</h2>
+  <button id="guardar">Guardar álbum</button>
+  <button onclick="window.print()">Guardar PDF</button>
+</header>
+
+<div class="contenedor">
+
+<aside class="herramientas">
+
+<h2>Editar mi álbum</h2>
+
+<h3>👑 Portada</h3>
+
+<label>Nombre de la quinceañera</label>
+<input id="nombreEditar" placeholder="Escribe el nombre">
+
+<button id="aplicarNombre">Cambiar nombre</button>
+<button id="borrarNombre">Quitar nombre</button>
+
+<label>Título de portada</label>
+<input id="tituloEditar" placeholder="Escribe el título">
+
+<button id="aplicarTitulo">Cambiar título</button>
+<button id="borrarTitulo">Quitar título</button>
+
+<hr>
+
+<h3>🎨 Diseños</h3>
+
+<select id="tema">
+<option value="princesa">Princesa morado y dorado</option>
+<option value="rosa">Rosa y flores</option>
+<option value="azul">Azul real y plata</option>
+<option value="negro">Negro y dorado</option>
+<option value="jardin">Jardín encantado</option>
+<option value="perla">Perla elegante</option>
+</select>
+
+<label>Color de fondo</label>
+<input type="color" id="colorFondo" value="#351052">
+
+<hr>
+
+<h3>📸 Mis fotografías</h3>
+<input type="file" id="fotos" accept="image/*" multiple>
+<div id="galeria"></div>
+
+<label>Tamaño de fotografía</label>
+<input type="range" id="zoom" min="50" max="180" value="100">
+
+<label>Brillo</label>
+<input type="range" id="brillo" min="50" max="160" value="100">
+
+<button id="girar">Girar foto</button>
+<button id="quitarFoto">Eliminar foto</button>
+
+<hr>
+
+<h3>✍️ Agregar texto</h3>
+<input id="textoNuevo" placeholder="Escribe una frase">
+<button id="agregarTexto">Agregar texto</button>
+
+<label>Color de letras</label>
+<input type="color" id="colorTexto" value="#f5d77a">
+
+<label>Tamaño de letras</label>
+<input type="range" id="tamTexto" min="12" max="56" value="28">
+
+<button id="borrarTexto">Eliminar texto seleccionado</button>
+
+<hr>
+
+<h3>🎬 Video</h3>
+<input type="file" id="videoArchivo" accept="video/*">
+<div id="videoArea"></div>
+
+<hr>
+
+<h3>📱 Código QR</h3>
+<input id="urlAlbum" placeholder="Enlace público del álbum">
+<button id="crearQR">Crear QR</button>
+<div id="qrArea">Aquí aparecerá tu QR</div>
+<button id="descargarQR" disabled>Descargar QR</button>
+
+</aside>
+
+<main class="zona">
+
+<section id="pagina" class="pagina princesa">
+
+<div class="decoracion">✦ ✧ ✦</div>
+
+<p>MIS QUINCE AÑOS</p>
+
+<h1 id="tituloPortada">Un sueño hecho realidad</h1>
+
+<div class="linea"></div>
+
+<h2 id="nombrePortada">Mi nombre</h2>
+
+<div id="photoStage">
+<p>Agrega tus fotografías aquí</p>
+</div>
+
+<div id="textLayer"></div>
+
+<div class="decoracion">✦ ✧ ✦</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+ÁLBUM XV STUDIO - ETAPA 2
+
+1. Extrae el ZIP.
+2. Abre la carpeta Album_XV_Studio_Etapa_2.
+3. Haz doble clic en index.html para abrirlo en Edge o Chrome.
+
+Incluye:
+- Temas de quinceañera.
+- Agregar y seleccionar fotos.
+- Ajustar tamaño, brillo y giro.
+- Agregar textos y cambiar color/tamaño.
+- Agregar y reproducir un video local.
+- Crear y descargar un QR cuando pegues el enlace público del álbum.
+- Guardar en el navegador e imprimir/guardar como PDF.
+
+IMPORTANTE SOBRE EL QR:
+El QR debe contener una dirección pública https:// para que los invitados puedan abrir el álbum desde sus teléfonos. Este programa no publica por sí solo el álbum en Internet. No pegues una dirección file:/// ni una dirección localhost: esas solo funcionan en tu computadora.
+Para crear el QR, el navegador necesita Internet porque carga la herramienta generadora de QR.

@@ -1,0 +1,283 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eee5f5;
+  color: #3b2050;
+  font-family: Georgia, serif;
+}
+
+.encabezado {
+  background: #28103e;
+  color: #f7df9a;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.encabezado h2 {
+  margin: 0;
+}
+
+button {
+  background: #704092;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4c236b;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 100vh;
+}
+
+.herramientas {
+  background: white;
+  padding: 16px;
+  overflow: auto;
+}
+
+.herramientas h2,
+.herramientas h3 {
+  color: #67358c;
+}
+
+.herramientas label {
+  display: block;
+  margin-top: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 9px;
+  margin-top: 6px;
+  border: 1px solid #d8c6e5;
+  border-radius: 7px;
+}
+
+input[type="color"] {
+  height: 40px;
+  padding: 3px;
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
+.herramientas button {
+  width: 100%;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eadff0;
+  margin: 18px 0;
+}
+
+.zona {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.pagina {
+  width: 100%;
+  max-width: 760px;
+  min-height: 760px;
+  border: 10px double #d6ad55;
+  border-radius: 10px;
+  padding: 35px;
+  text-align: center;
+  color: #ffedbd;
+  background: radial-gradient(
+    circle at top,
+    #75459a,
+    #32104e 75%
+  );
+  box-shadow: 0 10px 30px #0003;
+  overflow: hidden;
+}
+
+.pagina.rosa {
+  background: linear-gradient(145deg, #6e244d, #e5a7c4);
+}
+
+.pagina.azul {
+  background: linear-gradient(145deg, #102d63, #7896c7);
+}
+
+.pagina.negro {
+  background: linear-gradient(145deg, #080808, #493514);
+}
+
+.pagina.jardin {
+  background: linear-gradient(145deg, #164d3b, #8da56c);
+}
+
+.pagina.perla {
+  background: linear-gradient(145deg, #82718d, #e4d9e8);
+}
+
+.decoracion {
+  color: #f6d77c;
+  font-size: 30px;
+  letter-spacing: 10px;
+  margin: 20px;
+}
+
+.pagina p {
+  letter-spacing: 5px;
+  color: #f6d77c;
+}
+
+.pagina h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: normal;
+  text-shadow: 0 2px 5px #0008;
+}
+
+.pagina h2 {
+  color: #ffe9a8;
+  font-size: 26px;
+}
+
+.linea {
+  width: 50%;
+  height: 2px;
+  background: #d8b45d;
+  margin: 20px auto;
+}
+
+#photoStage {
+  min-height: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+#photoStage p {
+  border: 2px dashed #e6cb7e;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.album-photo {
+  max-width: 46%;
+  max-height: 310px;
+  object-fit: contain;
+  border: 5px solid #e6c66f;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.album-photo.selected,
+#textLayer .selected {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 10px 0;
+}
+
+#galeria img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#textLayer .movable-text {
+  display: inline-block;
+  padding: 6px;
+  margin: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 0 2px 4px #0008;
+}
+
+#videoArea video {
+  width: 100%;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+#qrArea {
+  min-height: 130px;
+  background: #faf7fc;
+  border: 1px dashed #c8b6d4;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #75647f;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+#qrArea img,
+#qrArea canvas {
+  max-width: 150px;
+}
+
+@media (max-width: 760px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .zona {
+    padding: 10px;
+  }
+
+  .pagina {
+    min-height: 580px;
+  }
+}
+
+@media print {
+  .encabezado,
+  .herramientas {
+    display: none;
+  }
+
+  .contenedor {
+    display: block;
+  }
+
+  .zona {
+    padding: 0;
+  }
+
+  .pagina {
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis XV Años</title>
+<style>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg,#f5e9ff,#fff5df);
+  color: #51216f;
+  text-align: center;
+}
+header {
+  padding: 35px 15px;
+  background: linear-gradient(135deg,#4b176d,#9b70b9);
+  color: #fff1cc;
+}
+h1 { font-size: 34px; }
+main { padding: 20px; }
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+.galeria img {
+  width: 100%;
+  border: 4px solid #d6b36a;
+  border-radius: 15px;
+}
+video {
+  width: 90%;
+  max-width: 700px;
+  border-radius: 15px;
+  margin: 15px auto;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="titulo">Mis XV Años</h1>
+  <h2 id="nombre">Nuestra princesa</h2>
+  <p>Un día lleno de magia y recuerdos</p>
+</header>
+
+<main>
+  <h2>Mi galería de recuerdos</h2>
+  <div class="galeria" id="galeria"></div>
+
+  <h2>Mis videos</h2>
+  <div id="videos"></div>
+
+  <h2>Con cariño</h2>
+  <p>Gracias por acompañarnos en este día tan especial.</p>
+</main>
+
+<script>
+const proyecto = JSON.parse(
+  localStorage.getItem("albumXVStudio") || "{}"
+);
+
+document.getElementById("titulo").textContent =
+  proyecto.titulo || "Mis XV Años";
+
+document.getElementById("nombre").textContent =
+  proyecto.nombre || "Nuestra princesa";
+
+(proyecto.fotos || []).forEach(foto => {
+  const img = document.createElement("img");
+  img.src = foto.src;
+  document.getElementById("galeria").appendChild(img);
+});
+</script>
+</body>
+</html>
